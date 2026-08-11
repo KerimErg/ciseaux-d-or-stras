@@ -13,20 +13,39 @@ document.addEventListener("DOMContentLoaded", function () {
   var navToggle = document.getElementById("navToggle");
   var navMenu = document.getElementById("navMenu");
 
+  var isDesktop = function () {
+    return window.matchMedia("(min-width: 901px)").matches;
+  };
+
+  function closeMenu() {
+    navMenu.classList.remove("is-open");
+    navToggle.classList.remove("is-active");
+    navToggle.setAttribute("aria-expanded", "false");
+    if (!isDesktop()) document.body.style.overflow = "";
+  }
+
   if (navToggle && navMenu) {
     navToggle.addEventListener("click", function () {
       var isOpen = navMenu.classList.toggle("is-open");
       navToggle.classList.toggle("is-active", isOpen);
       navToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+      // Verrouille le défilement de la page quand le menu mobile est ouvert
+      document.body.style.overflow = isOpen ? "hidden" : "";
     });
 
     // Ferme le menu quand on clique sur un lien
     navMenu.querySelectorAll("a").forEach(function (link) {
-      link.addEventListener("click", function () {
+      link.addEventListener("click", closeMenu);
+    });
+
+    // Réinitialise si on repasse en desktop
+    window.addEventListener("resize", function () {
+      if (isDesktop()) {
         navMenu.classList.remove("is-open");
         navToggle.classList.remove("is-active");
         navToggle.setAttribute("aria-expanded", "false");
-      });
+        document.body.style.overflow = "";
+      }
     });
   }
 
