@@ -1,8 +1,15 @@
-# Ciseaux d'Or — Salon de coiffure à Strasbourg
+# Ciseaux d'Or Strasbourg — Homme
 
 Site vitrine moderne, élégant et responsive pour le salon de coiffure et
-barbier **Ciseaux d'Or** (Strasbourg). Réalisé en **HTML, CSS et JavaScript**
-purs, sans framework, et prêt à être publié sur **GitHub Pages**.
+barbier **pour homme** **Ciseaux d'Or Strasbourg — Homme**. Réalisé en
+**HTML, CSS et JavaScript** purs, sans framework, et prêt à être publié sur
+**GitHub Pages**.
+
+**Coordonnées du salon**
+
+- **Adresse** : 1 Rue d'Ingwiller, 67000 Strasbourg
+- **Téléphone** : 03 88 22 56 40
+- **Horaires** : du mardi au samedi, 9h00 – 19h00 (fermé lundi et dimanche)
 
 ## ✨ Fonctionnalités
 
@@ -40,29 +47,18 @@ Voir le guide détaillé : [`images/README.md`](images/README.md).
 
 ## ✏️ Informations à personnaliser
 
-Les textes ci-dessous sont **temporaires** et clairement identifiables dans le
-code (`index.html`). Recherchez les marqueurs pour les remplacer facilement :
+L'adresse, le téléphone, les horaires et la carte du salon sont désormais
+**renseignés**. Il reste seulement quelques éléments optionnels à compléter,
+clairement identifiables dans `index.html` :
 
-| À remplacer                     | Comment le trouver dans `index.html`          |
-| ------------------------------- | --------------------------------------------- |
-| Lien de réservation             | `#RESERVATION-A-REMPLACER`                     |
-| Lien Instagram                  | `#INSTAGRAM-A-REMPLACER`                       |
-| Adresse                         | Section `#contact` → « Adresse »               |
-| Téléphone                       | Section `#contact` → « Téléphone »             |
-| Email                           | Section `#contact` → « Email »                 |
-| Horaires                        | Section `#horaires` (bloc `hours__list`)       |
-| Tarifs des prestations          | `class="amount"` (« 00 € »)                    |
-| Carte Google Maps               | Section `#contact` (bloc `contact__map`)       |
+| À remplacer            | Comment le trouver dans `index.html`      |
+| ---------------------- | ----------------------------------------- |
+| Lien de réservation    | `#RESERVATION-A-REMPLACER`                 |
+| Lien Instagram         | `#INSTAGRAM-A-REMPLACER`                   |
+| Tarifs des prestations | `class="amount"` (« 00 € »)               |
 
 > 💡 Astuce : dans votre éditeur, faites une recherche sur `TODO` ou sur
-> `A-REMPLACER` pour repérer tous les éléments à modifier.
-
-### Ajouter la carte Google Maps
-
-1. Ouvrez [Google Maps](https://www.google.com/maps) et recherchez votre salon.
-2. Cliquez sur **Partager** → **Intégrer une carte** → **Copier le HTML**.
-3. Dans `index.html`, remplacez le bloc `contact__map-placeholder` par le code
-   `<iframe>` copié.
+> `A-REMPLACER` pour repérer les éléments restants à modifier.
 
 ## 🚀 Publier sur GitHub Pages
 
