@@ -1,21 +1,19 @@
 # Dossier des photos — Ciseaux d'Or
 
-Ce dossier contient les images du site. La plupart sont de **vraies photos du
-salon** ; seul `hero.jpg` reste une **image temporaire** (placeholder) que vous
-pouvez remplacer en gardant le même nom de fichier.
+Ce dossier contient les images du site — toutes sont désormais de **vraies
+photos du salon**. Pour en remplacer une, gardez le même nom de fichier.
 
 ## Images du site
 
-| Fichier         | Où elle apparaît                    | Statut       |
-| --------------- | ----------------------------------- | ------------ |
-| `hero.jpg`      | Grande image d'accueil              | Temporaire   |
-| `accueil.png`   | Section « Le salon » (photo principale) | Photo réelle |
-| `salon1.png`    | Section « Le salon » (ambiance)     | Photo réelle |
-| `salon2.png`    | Section « Le salon » (ambiance)     | Photo réelle |
-| `facade.png`    | Section « Contact » (façade / localisation) | Photo réelle |
-| `coupe-1.png`   | Galerie « Nos réalisations »        | Photo réelle |
-| `coupe-2.png`   | Galerie « Nos réalisations »        | Photo réelle |
-| `coupe-3.png`   | Galerie « Nos réalisations »        | Photo réelle |
+| Fichier         | Où elle apparaît                              |
+| --------------- | --------------------------------------------- |
+| `salon1.png`    | Accueil (grande photo hero)                   |
+| `accueil.png`   | Section « Le salon » (photo principale)       |
+| `salon2.png`    | Section « Le salon » (bande espace)           |
+| `coupe-1.png`   | Galerie « Nos réalisations »                  |
+| `coupe-2.png`   | Galerie « Nos réalisations » + bandeau CTA    |
+| `coupe-3.png`   | Galerie « Nos réalisations »                  |
+| `facade.png`    | Section « Contact » (façade / localisation)   |
 
 ## Conseils
 
