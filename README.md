@@ -45,20 +45,18 @@ Les images fournies sont **temporaires**. Pour utiliser vos propres photos,
 remplacez les fichiers du dossier `images/` **en gardant les mêmes noms**.
 Voir le guide détaillé : [`images/README.md`](images/README.md).
 
-## ✏️ Informations à personnaliser
+## ✏️ Informations configurées
 
-L'adresse, le téléphone, les horaires et la carte du salon sont désormais
-**renseignés**. Il reste seulement quelques éléments optionnels à compléter,
-clairement identifiables dans `index.html` :
+Les informations essentielles du salon sont désormais **renseignées** dans
+`index.html` :
 
-| À remplacer            | Comment le trouver dans `index.html`      |
-| ---------------------- | ----------------------------------------- |
-| Lien de réservation    | `#RESERVATION-A-REMPLACER`                 |
-| Lien Instagram         | `#INSTAGRAM-A-REMPLACER`                   |
-| Tarifs des prestations | `class="amount"` (« 00 € »)               |
+- **Adresse**, **téléphone**, **horaires** et **carte** du salon
+- **Réservation** : boutons « Prendre rendez-vous » vers Planity
+- **Instagram** : lien vers le profil officiel du salon
+- **Tarifs** des prestations (indiqués comme temporaires, à confirmer)
 
-> 💡 Astuce : dans votre éditeur, faites une recherche sur `TODO` ou sur
-> `A-REMPLACER` pour repérer les éléments restants à modifier.
+Seules `hero.jpg` et `salon.jpg` restent des **images temporaires** que vous
+pouvez remplacer (voir [`images/README.md`](images/README.md)).
 
 ## 🚀 Publier sur GitHub Pages
 
