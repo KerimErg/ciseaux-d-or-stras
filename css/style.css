@@ -474,6 +474,7 @@ ul {
   display: inline-flex;
   align-items: center;
   gap: 12px;
+  font-family: "Jost", "Inter", system-ui, sans-serif;
   font-size: 0.78rem;
   font-weight: 600;
   letter-spacing: 0.3em;
@@ -490,7 +491,7 @@ ul {
 }
 
 .hero__title {
-  font-family: var(--font-display);
+  font-family: "Bodoni Moda", "Fraunces", Georgia, serif;
   font-weight: 500;
   font-size: clamp(3rem, 8.5vw, 6rem);
   line-height: 0.98;
@@ -506,6 +507,7 @@ ul {
 
 .hero__location {
   margin-top: 22px;
+  font-family: "Jost", "Inter", system-ui, sans-serif;
   font-size: 0.95rem;
   letter-spacing: 0.32em;
   text-transform: uppercase;
@@ -515,6 +517,7 @@ ul {
 .hero__tagline {
   margin-top: 22px;
   max-width: 520px;
+  font-family: "Jost", "Inter", system-ui, sans-serif;
   font-size: 1.1rem;
   font-weight: 300;
   color: rgba(255, 255, 255, 0.9);
