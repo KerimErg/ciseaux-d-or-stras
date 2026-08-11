@@ -731,54 +731,31 @@ ul {
 
 .service-card__desc {
   margin-top: 10px;
-  font-size: 0.92rem;
-  color: var(--muted);
-  min-height: 46px;
-}
-
-.service-card__price {
-  margin-top: 22px;
-  padding-top: 20px;
-  border-top: 1px solid var(--line);
-  display: flex;
-  align-items: baseline;
-  gap: 8px;
-}
-
-.service-card__price .amount {
-  font-family: var(--font-display);
-  font-size: 1.7rem;
-  font-weight: 600;
-  color: var(--gold-deep);
-  white-space: nowrap;
-  flex-shrink: 0;
-}
-
-.service-card__price .label {
-  font-size: 0.72rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  font-size: 0.95rem;
   color: var(--muted);
 }
 
-.service-card__price-note {
-  margin-top: 12px;
-  font-size: 0.85rem;
-  color: var(--muted);
+/* Filet doré discret en pied de carte (remplace l'ancien bloc tarif) */
+.service-card::after {
+  content: "";
+  display: block;
+  margin-top: auto;
+  padding-top: 24px;
 }
 
-.service-card__price-note strong {
-  color: var(--gold-deep);
-  font-weight: 600;
+.service-card__title::after {
+  content: "";
+  display: block;
+  width: 34px;
+  height: 2px;
+  margin-top: 14px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--gold-soft), var(--gold-deep));
+  transition: width 0.45s var(--ease);
 }
 
-.services__note {
-  text-align: center;
-  max-width: 560px;
-  margin: 44px auto 0;
-  font-size: 0.85rem;
-  font-style: italic;
-  color: var(--muted);
+.service-card:hover .service-card__title::after {
+  width: 56px;
 }
 
 .services__cta {
