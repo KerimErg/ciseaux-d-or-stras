@@ -598,8 +598,7 @@ ul {
 .gallery__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: 260px;
-  gap: 16px;
+  gap: 20px;
 }
 
 .gallery__item {
@@ -607,6 +606,8 @@ ul {
   overflow: hidden;
   border-radius: var(--radius);
   cursor: pointer;
+  aspect-ratio: 4 / 5;
+  box-shadow: var(--shadow);
 }
 
 .gallery__item--tall {
@@ -1149,12 +1150,12 @@ ul {
   }
 
   .gallery__grid {
-    grid-template-columns: repeat(2, 1fr);
-    grid-auto-rows: 200px;
+    grid-template-columns: 1fr;
+    gap: 16px;
   }
 
-  .gallery__item--wide {
-    grid-column: span 2;
+  .gallery__item {
+    aspect-ratio: 4 / 3;
   }
 
   .about__features {
@@ -1171,15 +1172,8 @@ ul {
     grid-template-columns: 1fr;
   }
 
-  .gallery__grid {
-    grid-template-columns: 1fr;
-    grid-auto-rows: 240px;
-  }
-
-  .gallery__item--wide,
-  .gallery__item--tall {
-    grid-column: span 1;
-    grid-row: span 1;
+  .gallery__item {
+    aspect-ratio: 4 / 3;
   }
 
   .footer__grid {

@@ -1,21 +1,19 @@
 # Dossier des photos — Ciseaux d'Or
 
-Ce dossier contient les images du site. Les fichiers actuels sont des
-**images temporaires** (placeholder). Pour mettre vos propres photos, il vous
-suffit de **remplacer chaque fichier en gardant exactement le même nom**.
+Ce dossier contient les images du site. Les photos de la galerie sont de
+**vraies photos du salon** ; `hero.jpg` et `salon.jpg` restent des
+**images temporaires** (placeholder) que vous pouvez remplacer en gardant le
+même nom de fichier.
 
-## Liste des images à remplacer
+## Images du site
 
-| Fichier            | Où elle apparaît            | Format conseillé        |
-| ------------------ | --------------------------- | ----------------------- |
-| `hero.jpg`         | Grande image d'accueil      | Paysage — 1920 × 1080 px |
-| `salon.jpg`        | Section « Le salon »        | Portrait — 900 × 1100 px |
-| `galerie-1.jpg`    | Galerie (grande, verticale) | Portrait — 800 × 1100 px |
-| `galerie-2.jpg`    | Galerie                     | Carré — 800 × 800 px     |
-| `galerie-3.jpg`    | Galerie                     | Carré — 800 × 800 px     |
-| `galerie-4.jpg`    | Galerie (large, horizontale)| Paysage — 1200 × 800 px  |
-| `galerie-5.jpg`    | Galerie                     | Carré — 800 × 800 px     |
-| `galerie-6.jpg`    | Galerie                     | Carré — 800 × 800 px     |
+| Fichier         | Où elle apparaît             | Format conseillé         | Statut       |
+| --------------- | ---------------------------- | ------------------------ | ------------ |
+| `hero.jpg`      | Grande image d'accueil       | Paysage — 1920 × 1080 px | Temporaire   |
+| `salon.jpg`     | Section « Le salon »         | Portrait — 900 × 1100 px | Temporaire   |
+| `coupe-1.png`   | Galerie « Nos réalisations » | Portrait — env. 4:5      | Photo réelle |
+| `coupe-2.png`   | Galerie « Nos réalisations » | Portrait — env. 4:5      | Photo réelle |
+| `coupe-3.png`   | Galerie « Nos réalisations » | Portrait — env. 4:5      | Photo réelle |
 
 ## Conseils
 
