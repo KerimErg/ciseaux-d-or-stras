@@ -1,19 +1,21 @@
 # Dossier des photos — Ciseaux d'Or
 
-Ce dossier contient les images du site. Les photos de la galerie sont de
-**vraies photos du salon** ; `hero.jpg` et `salon.jpg` restent des
-**images temporaires** (placeholder) que vous pouvez remplacer en gardant le
-même nom de fichier.
+Ce dossier contient les images du site. La plupart sont de **vraies photos du
+salon** ; seul `hero.jpg` reste une **image temporaire** (placeholder) que vous
+pouvez remplacer en gardant le même nom de fichier.
 
 ## Images du site
 
-| Fichier         | Où elle apparaît             | Format conseillé         | Statut       |
-| --------------- | ---------------------------- | ------------------------ | ------------ |
-| `hero.jpg`      | Grande image d'accueil       | Paysage — 1920 × 1080 px | Temporaire   |
-| `salon.jpg`     | Section « Le salon »         | Portrait — 900 × 1100 px | Temporaire   |
-| `coupe-1.png`   | Galerie « Nos réalisations » | Portrait — env. 4:5      | Photo réelle |
-| `coupe-2.png`   | Galerie « Nos réalisations » | Portrait — env. 4:5      | Photo réelle |
-| `coupe-3.png`   | Galerie « Nos réalisations » | Portrait — env. 4:5      | Photo réelle |
+| Fichier         | Où elle apparaît                    | Statut       |
+| --------------- | ----------------------------------- | ------------ |
+| `hero.jpg`      | Grande image d'accueil              | Temporaire   |
+| `accueil.png`   | Section « Le salon » (photo principale) | Photo réelle |
+| `salon1.png`    | Section « Le salon » (ambiance)     | Photo réelle |
+| `salon2.png`    | Section « Le salon » (ambiance)     | Photo réelle |
+| `facade.png`    | Section « Contact » (façade / localisation) | Photo réelle |
+| `coupe-1.png`   | Galerie « Nos réalisations »        | Photo réelle |
+| `coupe-2.png`   | Galerie « Nos réalisations »        | Photo réelle |
+| `coupe-3.png`   | Galerie « Nos réalisations »        | Photo réelle |
 
 ## Conseils
 
