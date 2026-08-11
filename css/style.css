@@ -554,6 +554,8 @@ ul {
   font-size: 1.6rem;
   font-weight: 600;
   color: var(--color-or);
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .service-card__price .label {
@@ -563,9 +565,31 @@ ul {
   letter-spacing: 0.1em;
 }
 
+/* Ligne de tarif secondaire (ex. Taille de barbe) */
+.service-card__price-note {
+  margin-top: 12px;
+  font-size: 0.85rem;
+  color: var(--color-gris);
+}
+
+.service-card__price-note strong {
+  color: var(--color-or);
+  font-weight: 600;
+}
+
+/* Mention "tarifs temporaires" sous la grille */
+.services__note {
+  text-align: center;
+  max-width: 560px;
+  margin: 40px auto 0;
+  font-size: 0.85rem;
+  font-style: italic;
+  color: var(--color-gris);
+}
+
 .services__cta {
   text-align: center;
-  margin-top: 56px;
+  margin-top: 40px;
 }
 
 /* =========================================================
