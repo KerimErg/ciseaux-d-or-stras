@@ -147,6 +147,37 @@
       });
     }
 
+    /* ---------- Hero : profondeur très légère (desktop) ---------- */
+    var heroImg = document.querySelector(".hero__media img");
+    if (heroImg && finePointer && !reduce) {
+      var hx = 0, hy = 0, hcx = 0, hcy = 0, hRaf = null, sY = 0;
+      var SCALE = 1.08, MAXX = 6, MAXY = 5, MAXS = 8; // pixels max
+      function heroLoop() {
+        hcx += (hx - hcx) * 0.08;
+        hcy += (hy - hcy) * 0.08;
+        heroImg.style.transform =
+          "scale(" + SCALE + ") translate3d(" + hcx.toFixed(2) + "px," +
+          (hcy + sY).toFixed(2) + "px,0)";
+        hRaf = requestAnimationFrame(heroLoop);
+      }
+      var hero = document.querySelector(".hero");
+      hero.addEventListener("mousemove", function (e) {
+        if (window.innerWidth <= 1024) return;
+        var r = hero.getBoundingClientRect();
+        hx = ((e.clientX - r.left) / r.width - 0.5) * 2 * MAXX;
+        hy = ((e.clientY - r.top) / r.height - 0.5) * 2 * MAXY;
+      }, { passive: true });
+      hero.addEventListener("mouseleave", function () { hx = 0; hy = 0; });
+      window.addEventListener("scroll", function () {
+        if (window.innerWidth <= 1024) { sY = 0; return; }
+        var r = hero.getBoundingClientRect();
+        if (r.bottom < 0) return;
+        sY = Math.max(0, Math.min(1, -r.top / (window.innerHeight || 1))) * MAXS;
+      }, { passive: true });
+      // Démarre après l'animation d'entrée pour ne pas la perturber
+      setTimeout(function () { if (window.innerWidth > 1024) heroLoop(); }, 2000);
+    }
+
     /* ---------- Jour d'ouverture ---------- */
     var day = new Date().getDay(); // 0 dim .. 6 sam
     if (day >= 2 && day <= 6) {
