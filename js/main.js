@@ -178,6 +178,42 @@
       setTimeout(function () { if (window.innerWidth > 1024) heroLoop(); }, 2000);
     }
 
+    /* ---------- Galerie horizontale épinglée (non bloquante) ---------- */
+    var hs = document.getElementById("hscroll");
+    var track = document.getElementById("track");
+    if (hs && track) {
+      var mq = window.matchMedia("(min-width: 761px)");
+      var FACTOR = 0.62; // < 1 : la galerie défile plus vite que la page (pin plus court)
+      var extra = 0;
+      function measure() {
+        if (reduce || !mq.matches) {
+          hs.style.height = "";
+          track.style.transform = "";
+          extra = 0;
+          return;
+        }
+        extra = Math.max(0, track.scrollWidth - window.innerWidth + 40);
+        hs.style.height = window.innerHeight + extra * FACTOR + "px";
+      }
+      function hMove() {
+        if (reduce || !mq.matches || extra <= 0) return;
+        var top = hs.getBoundingClientRect().top;
+        var span = extra * FACTOR;
+        var scrolled = Math.min(Math.max(-top, 0), span);
+        track.style.transform =
+          "translate3d(" + (-(scrolled / FACTOR)).toFixed(1) + "px,0,0)";
+      }
+      measure();
+      hMove();
+      window.addEventListener("scroll", hMove, { passive: true });
+      window.addEventListener("resize", function () {
+        measure();
+        hMove();
+      });
+      setTimeout(function () { measure(); hMove(); }, 300);
+      window.addEventListener("load", function () { measure(); hMove(); });
+    }
+
     /* ---------- Jour d'ouverture ---------- */
     var day = new Date().getDay(); // 0 dim .. 6 sam
     if (day >= 2 && day <= 6) {
@@ -198,7 +234,7 @@
       lb.classList.remove("open"); lb.setAttribute("aria-hidden", "true");
       body.style.overflow = "";
     }
-    document.querySelectorAll(".shot img").forEach(function (im) {
+    document.querySelectorAll(".shot img, .frame:not(.frame--end) img").forEach(function (im) {
       im.addEventListener("click", function () {
         openLb(im.currentSrc || im.src, im.alt);
       });
