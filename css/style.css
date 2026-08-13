@@ -20,7 +20,7 @@
   --line-d: rgba(239, 233, 222, 0.14);
   --line-l: rgba(16, 16, 18, 0.13);
 
-  --font-display: "Archivo Expanded", "Arial Narrow", system-ui, sans-serif;
+  --font-display: "Syne", "Archivo", "Arial Black", system-ui, sans-serif;
   --font-ui: "Archivo", "Segoe UI", system-ui, sans-serif;
 
   --maxw: 1400px;
@@ -1295,8 +1295,8 @@ body.no-intro .intro {
     padding-bottom: clamp(40px, 6vh, 72px);
   }
   .hero__word {
-    font-size: clamp(2.6rem, 13.5vw, 4.4rem);
-    line-height: 0.9;
+    font-size: clamp(2.1rem, 11.6vw, 3.7rem);
+    line-height: 0.92;
   }
   .hero__word .l-window {
     background-size: 160% auto;
@@ -1418,7 +1418,7 @@ body.no-intro .intro {
 
 @media (max-width: 420px) {
   .hero__word {
-    font-size: clamp(2.3rem, 13vw, 3.6rem);
+    font-size: clamp(1.85rem, 11vw, 3.1rem);
   }
   .hero__actions {
     flex-direction: column;
