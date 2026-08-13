@@ -106,16 +106,19 @@
     if (hs && track) {
       var mq = window.matchMedia("(min-width: 761px)");
       var extra = 0;
+      // Facteur < 1 : on traverse la galerie en scrollant moins (descente plus facile)
+      var FACTOR = 0.62;
       function measure() {
         if (reduce || !mq.matches) { hs.style.height = ""; track.style.transform = ""; extra = 0; return; }
-        extra = Math.max(0, track.scrollWidth - window.innerWidth);
-        hs.style.height = (window.innerHeight + extra) + "px";
+        extra = Math.max(0, track.scrollWidth - window.innerWidth + 40);
+        hs.style.height = (window.innerHeight + extra * FACTOR) + "px";
       }
       function hMove() {
         if (reduce || !mq.matches || extra <= 0) return;
         var top = hs.getBoundingClientRect().top;
-        var scrolled = Math.min(Math.max(-top, 0), extra);
-        track.style.transform = "translate3d(" + (-scrolled).toFixed(1) + "px,0,0)";
+        var span = extra * FACTOR;
+        var scrolled = Math.min(Math.max(-top, 0), span);
+        track.style.transform = "translate3d(" + (-(scrolled / FACTOR)).toFixed(1) + "px,0,0)";
       }
       var tks = false;
       window.addEventListener("scroll", function () { if (!tks) { requestAnimationFrame(function () { hMove(); tks = false; }); tks = true; } }, { passive: true });
